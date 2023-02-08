@@ -6,18 +6,27 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <title>HydroHeat</title>
         <link rel="stylesheet" href="styles.css">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     </head>
     <body>
         <script src="lib.js" async defer></script>
-        <div id="title" class="center">
-            <h1>HydroHeat</h1>
+        <div id="title">
+            <div id="title-hydro"><h1>Hydro</h1></div>
+            <div id="title-heat"><h1>Heat</h1></div>
         </div>
         <div id="sub-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores harum ipsa sunt quo facilis consequatur, magnam voluptas dignissimos perspiciatis eveniet dolore dolorem accusamus! Itaque distinctio repudiandae veritatis, numquam vel nulla.
+            We are team <b1>Hydro</b1><b>Heat</b>, a dedicated team from Fulford School who have found a better way to repurpose all of that money spent cooling computer systems.
+            
+        </div>
+        <div id="sub-sub-text">
+            We are: Kieran, Zak, Jonathan and Sam
         </div>
         <div id="flow-rate">
+            <h1>Flow Rate</h1>
             <div id="flow-rate-num">
-                50
+                <h2>
+                    50
+                </h2>
             </div>
             <div id="slidebox">
                 <input type="button" value="-" id="minus">
@@ -30,7 +39,15 @@
             </div>
             
         </div>
+        <div class="temp-chart-container">
+            <div id="temp-chart">
+                <!--add a toggle for the chart to go between CPU temps and pool temps-->
+                <div id="temp-chart"></div>
+            </div>
+            <div id="chart2">
 
-            
+            </div>
+        </div>
+
     </body>
 </html>

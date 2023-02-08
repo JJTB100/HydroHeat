@@ -1,27 +1,65 @@
 :root{
-    --MainbackgroundColor: #575757;
+    --main-background-color: #221c35;
+    --main-color: #31AFD4;
+    --secondary-color: #D84727;
+    --foreground-color:#FCDDF2;
+    --off-white: #eedddd;
 }
 body{
     font-size: 20px;
-    background-color: var(--MainbackgroundColor);
-    color: white;
+    background-color: var(--main-background-color);
+    color: var(--off-white);
+    font-weight:bolder;
+}
+b{
+  color: var(--secondary-color);
+  font-weight: 13px;
+}
+b1{
+  color: var(--main-color);
+  font-weight: 13px;
+  
 }
 #title{
+    margin:0;
     font-size: 2rem;
     text-align: center;
     font-family: 'Roboto', sans-serif;
+    
 }
-#sub-text{
+#title-heat, #title-hydro{
+  display: inline;
+  width: 49%;
+  float: left;
+  text-align: left;
+  color: var(--secondary-color)
+}
+#title-hydro{
+  text-align: right;
+  float: left;
+  width:51%;
+  color: var(--main-color)
+}
+#sub-text, #sub-sub-text{
     text-align: center;
     width: 80%;
     margin: auto;
+    margin-bottom: 2%;
+}
+#sub-sub-text{
+    font-size: 1rem;
 }
 #flow-rate{
     margin-top: 5%;
+    text-align: center;
+    border-top: var(--main-color) dashed 3px;
+    color: var(--off-white);
 }
 #flow-rate-num{
     text-align: center;
-    font-size: 5rem;
+    font-size: 3.5rem;
+    color: var(-var(--off-white));
+    
 }
 
 #slidebox{
@@ -64,7 +102,7 @@ body{
     appearance: none;
     width: 25px; /* Set a specific slider handle width */
     height: 25px; /* Slider handle height */
-    background: #00aeff; /* Green background */
+    background: var(--secondary-color); /* Green background */
     cursor: pointer; /* Cursor on hover */
     border-radius: 50%;
     height:25px;
@@ -73,7 +111,6 @@ body{
   .slider::-webkit-slider-thumb:hover {
     width: 35px;
     height: 35px;
-    
 
   }
   
@@ -83,23 +120,19 @@ body{
     border:rgb(59, 59, 59);
     float: left;
     cursor: pointer;
-    color:white;
+    color:var(--off-white);
     font-size: 3em;
     justify-content: center;
     margin-bottom: 8px;
     padding: 0.6em;
     transition: 200ms;
   }
-  #metronome{
-    padding-right: 10%;
-    padding-left: 10%;
-  }
   #plus{
     background: rgba(255, 255, 255, 0);
     border: none;
     float: right;
     cursor: pointer;
-    color:white;
+    color:var(--off-white);
     font-size: 3rem;
     justify-content: center;
     transition: 200ms;
@@ -107,9 +140,25 @@ body{
     margin-bottom: 8px;
   }
   #plus:hover{
-    text-shadow: 0px 0px 20px #00ffff;
+    text-shadow: 0px 0px 20px var(--secondary-color);
   }
   #minus:hover{
-    text-shadow: 0px 0px 20px  #00ffff;
+    text-shadow: 0px 0px 20px  var(--secondary-color);
   }
-  
+
+  #temp-chart{
+    text-align: center;
+    width: 100%;
+    position: relative;
+  }
+
+  #temp-chart tbody, #temp-chart tables {
+    width: 100%;
+  }
+
+#temp-chart tr {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
