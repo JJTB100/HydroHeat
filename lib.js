@@ -40,27 +40,34 @@ google.charts.load('current', {'packages':['gauge']});
       var data = google.visualization.arrayToDataTable([
         ['Label', 'Value'],
         ['Temp', 80],
-        ['Pool Temp', 80]
+        
+      ]);
+
+      var data2 = google.visualization.arrayToDataTable([
+        ['Label', 'Value'],
+        ['Gauge', 80],
+        
       ]);
 
       var options = {
-        width: window.innerWidth,
         redFrom: 90, redTo: 100, redColor: getComputedStyle(document.documentElement).getPropertyValue('--main-color'),
         yellowFrom:75, yellowTo: 90,
         minorTicks: 5
       };
 
       var chart = new google.visualization.Gauge(document.getElementById('temp-chart'));
+      var chart2 = new google.visualization.Gauge(document.getElementById('chart2'));
 
       chart.draw(data, options);
+      chart2.draw(data, options);
 
       setInterval(function() {
         data.setValue(0, 1, 40 + Math.round(60 * Math.random()));
         chart.draw(data, options);
       }, 1000);
       setInterval(function() {
-        data.setValue(1, 1, 40 + Math.round(60 * Math.random()));
-        chart.draw(data, options);
+        data2.setValue(0, 1, 40 + Math.round(60 * Math.random()));
+        chart2.draw(data2, options);
       }, 1000);
     }
 

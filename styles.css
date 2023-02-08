@@ -10,6 +10,7 @@ body{
     background-color: var(--main-background-color);
     color: var(--off-white);
     font-weight:bolder;
+    font-family: "Roboto", sans-serif;
 }
 b{
   color: var(--secondary-color);
@@ -53,6 +54,7 @@ b1{
     margin-top: 5%;
     text-align: center;
     border-top: var(--main-color) dashed 3px;
+    border-bottom: var(--main-color) dashed 3px;
     color: var(--off-white);
 }
 #flow-rate-num{
@@ -145,20 +147,17 @@ b1{
   #minus:hover{
     text-shadow: 0px 0px 20px  var(--secondary-color);
   }
+ #temp-chart{
+  display: inline;
+  width: 50%;
+  float: left;
+ }
+ #chart2{
+  display: inline;
+  width: 50%;
+  float: right;
+ }
 
-  #temp-chart{
-    text-align: center;
-    width: 100%;
-    position: relative;
-  }
 
-  #temp-chart tbody, #temp-chart tables {
-    width: 100%;
-  }
 
-#temp-chart tr {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
-}
+
