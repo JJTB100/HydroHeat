@@ -8,3 +8,28 @@
 |[Submersible water pump](https://www.amazon.co.uk/dp/B0971BGTTG?psc=1&ref=ppx_yo2ov_dt_b_product_details)                          |£15.99| 4      |
 |[Water heat sink](https://www.amazon.co.uk/dp/B078MK5GG9?psc=1&ref=ppx_yo2ov_dt_b_product_details)                                 |£6.99 | 2      |
 |Lego swimming pool                                                                                                                 |N/A   | 1      |
+
+
+# Build Guide:
+
+## Setting up the raspberry pi
+
+### Installing the operating system
+- Download the Raspberry Pi OS Imaging tool from https://www.raspberrypi.com/software/
+![image](https://user-images.githubusercontent.com/760604/220124480-a7dfc367-48ec-40e8-8bcb-132fd85c7eb8.png)
+- Change the settings to do the following
+  - Set the hostname to `hydroheat`
+  - Enable SSH
+  - Set the username and password. We used `hydroheat` as the username and `Hydr0` as the password for this guide. You will need to choose a different password for production.
+  - Configure the wireless LAN to connect to your WiFi network
+- Write the operating system to the SD card
+![image](https://user-images.githubusercontent.com/760604/220125087-68009fcf-b937-47c1-baed-32317451664b.png)
+- Insert the SD card to the raspberry pi, connect the mouse, keyboard and HDMI cable and then plug in the power supply
+
+### Setting up the server
+- Open a terminal and set the time using a command line `sudo date -s "20 Feb 2023 13:56"`
+- Update software with:
+```
+sudo apt update
+sudo apt upgrade
+```
