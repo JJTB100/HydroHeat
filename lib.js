@@ -50,7 +50,7 @@ google.charts.load('current', {'packages':['gauge']});
       ]);
 
       var options = {
-        redFrom: 90, redTo: 100, redColor: getComputedStyle(document.documentElement).getPropertyValue('--main-color'),
+        redFrom: 90, redTo: 100, redColor: '#D84727', greenColor: '#31AFD4', greenFrom: 0, greenTo: 75,
         yellowFrom:75, yellowTo: 90,
         minorTicks: 5
       };

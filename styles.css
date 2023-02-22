@@ -145,17 +145,18 @@ b1{
     text-shadow: 0px 0px 20px var(--secondary-color);
   }
   #minus:hover{
-    text-shadow: 0px 0px 20px  var(--secondary-color);
+    text-shadow: 0px 0px 20px var(--secondary-color);
   }
+.temp-chart-container{
+  display: grid;
+  grid-template:auto auto;
+  height: 1000px;
+}
  #temp-chart{
-  display: inline;
-  width: 50%;
-  float: left;
+  grid-column: 1;
  }
  #chart2{
-  display: inline;
-  width: 50%;
-  float: right;
+  grid-column: 2;
  }
 
 
