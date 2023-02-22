@@ -1,0 +1,164 @@
+:root{
+    --main-background-color: #221c35;
+    --main-color: #31AFD4;
+    --secondary-color: #D84727;
+    --foreground-color:#FCDDF2;
+    --off-white: #eedddd;
+}
+body{
+    font-size: 20px;
+    background-color: var(--main-background-color);
+    color: var(--off-white);
+    font-weight:bolder;
+    font-family: "Roboto", sans-serif;
+}
+b{
+  color: var(--secondary-color);
+  font-weight: 13px;
+}
+b1{
+  color: var(--main-color);
+  font-weight: 13px;
+  
+}
+#title{
+    margin:0;
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    
+}
+#title-heat, #title-hydro{
+  display: inline;
+  width: 49%;
+  float: left;
+  text-align: left;
+  color: var(--secondary-color)
+}
+#title-hydro{
+  text-align: right;
+  float: left;
+  width:51%;
+  color: var(--main-color)
+}
+#sub-text, #sub-sub-text{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2%;
+}
+#sub-sub-text{
+    font-size: 1rem;
+}
+#flow-rate{
+    margin-top: 5%;
+    text-align: center;
+    border-top: var(--main-color) dashed 3px;
+    border-bottom: var(--main-color) dashed 3px;
+    color: var(--off-white);
+}
+#flow-rate-num{
+    text-align: center;
+    font-size: 3.5rem;
+    color: var(-var(--off-white));
+    
+}
+
+#slidebox{
+    display: flex;
+    margin:auto;
+  
+  }
+  .slidecontainer {
+  
+    width: 100%; /* Width of the outside container */
+    float: left;
+    display: flex;
+}
+  
+  /* The slider itself */
+  .slider {
+    margin: auto;
+    justify-content: center;
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; 
+    height: 10px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 1; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: .2s;
+    border-radius: 5px;
+    
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+    height: 15px;
+
+  }
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: var(--secondary-color); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 50%;
+    height:25px;
+    transition: 0.2s;
+  }
+  .slider::-webkit-slider-thumb:hover {
+    width: 35px;
+    height: 35px;
+
+  }
+  
+
+  #minus{
+    background: rgba(255, 255, 255, 0);
+    border:rgb(59, 59, 59);
+    float: left;
+    cursor: pointer;
+    color:var(--off-white);
+    font-size: 3em;
+    justify-content: center;
+    margin-bottom: 8px;
+    padding: 0.6em;
+    transition: 200ms;
+  }
+  #plus{
+    background: rgba(255, 255, 255, 0);
+    border: none;
+    float: right;
+    cursor: pointer;
+    color:var(--off-white);
+    font-size: 3rem;
+    justify-content: center;
+    transition: 200ms;
+    padding: 0.6em;
+    margin-bottom: 8px;
+  }
+  #plus:hover{
+    text-shadow: 0px 0px 20px var(--secondary-color);
+  }
+  #minus:hover{
+    text-shadow: 0px 0px 20px var(--secondary-color);
+  }
+.temp-chart-container{
+  display: grid;
+  grid-template:auto auto;
+  height: 1000px;
+}
+ #temp-chart{
+  grid-column: 1;
+ }
+ #chart2{
+  grid-column: 2;
+ }
+
+
+
+

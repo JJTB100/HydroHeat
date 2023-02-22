@@ -1,0 +1,183 @@
+
+
+body {
+    
+    /*background: linear-gradient(to top right, rgba(16, 38, 56, 0.7), rgba(0, 187, 255, 0.116)) url("media/ripples.png");*/
+    background-color: rgb(5, 11, 12);
+    
+    font-family: 'Exo', sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    opacity: 1;
+    font-size: 16px;
+
+}
+
+/* Style the footer */
+.footer {
+  grid-area: footer;
+  background-color: rgba(0,0,0,0);
+  padding: 10px;
+  text-align: center;
+  border-radius: 12px;
+  
+}
+
+/* Style the header */
+.header {
+  grid-area: header;
+  background-color: rgba(0, 0, 0, 0);
+  margin-bottom: 10px;
+  text-align: center;
+  z-index: 2;
+  opacity: 1;
+}
+
+
+
+#logo {
+    width: 10%;
+    position: absolute;
+    top: 11%;
+    left: 9%;
+    
+
+}
+
+
+
+#menu{
+
+    display:flex;
+    align-items: center;
+
+    color: rgb(239, 248, 255)
+}
+
+#menu[data-active-index="0"] > #menu-background-image {
+  background-position: center 10%;
+}
+
+#menu[data-active-index="1"] > #menu-background-image {
+  background-position: center 30%;
+}
+
+#menu[data-active-index="2"] > #menu-background-image {
+  background-position: center 50%;
+}
+
+#menu[data-active-index="3"] > #menu-background-image {
+  background-position: center 70%;
+}
+#menu[data-active-index="4"] > #menu-background-image {
+  background-position: center 90%;
+}
+
+#menu[data-active-index="0"] > #menu-background-pattern {
+    background-position: 10% -50vmin;
+  }
+  
+  #menu[data-active-index="1"] > #menu-background-pattern {
+    background-position: 10% -100vmin;
+  }
+  
+  #menu[data-active-index="2"] > #menu-background-pattern {
+    background-position: 10% -150vmin;
+  }
+  
+  #menu[data-active-index="3"] > #menu-background-pattern {
+    background-position: 10% -200vmin;
+  }
+  #menu[data-active-index="4"] > #menu-background-pattern {
+    background-position: 10% -250vmin;
+  }
+
+
+  
+
+#menu-items {
+    margin-left: clamp(3rem, 20vw, 48rem);
+    position: relative;
+    z-index:2;
+
+    transform: translateY(12%);
+}
+
+#menu-items:hover > .menu-item{
+    opacity: 0.3;
+}
+
+#menu-items:hover > .menu-item:hover{
+    opacity:1;
+
+}
+.menu-item{
+    color:rgb(202, 236, 243);
+    font-size:clamp(2rem, 6vw, 6rem);
+    
+    display: block;
+    text-decoration: none;
+    padding: clamp(0.25rem, 0.5vw, 1rem)0rem;
+    transition: opacity 400ms ease;
+}
+#menu-background-pattern {
+    /*background-image: radial-gradient(
+      rgba(191, 244, 255, 0.1) 10%, 
+      transparent 9%
+    );*/
+    background-image: url("media/RiverSafeLogo.png");
+    opacity: 0.1;
+    background-repeat:repeat-y, space;
+    
+    
+    background-position: 10% 40%;
+    background-size: 60vmin 60vmin;
+    height: 100vh;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    transition: opacity 800ms ease, 
+      background-size 2000ms ease,
+      background-position 800ms ease;
+    width: 100vw;
+    z-index: -1;
+    -webkit-filter: grayscale(70%);
+    filter: grayscale(70%);
+  }
+  #menu-background-image{
+    height: 100vh;
+    width: 100vw;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    background-image: url("media/menuImage3.jpg");
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index:-1;
+
+    background-position: center 40%;
+    background-size: 110vmax;
+    opacity: 0.15;
+
+    transition: opacity 800ms ease,
+    background-size 2000ms ease,
+    background-position 800ms ease;
+  }
+
+#menu-items:hover ~ #menu-background-image {
+    background-size: 100vmax;
+    opacity: 0.1;
+}
+
+#menu-items:hover ~ #menu-background-pattern {
+    background-size: 60vmin 60vmin;
+    opacity: 0.3;
+}
+#main-name{
+  margin:0;
+  font-size: 1.5em;
+  color:rgb(168, 225, 238);
+}

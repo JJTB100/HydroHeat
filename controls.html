@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <title>HydroHeat</title>
+        <link rel="stylesheet" href="controlsStyles.css">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    </head>
+    <body>
+        <script src="contolsLib.js" async defer></script>
+        <div id="title">
+            <div id="title-hydro"><h1>Hydro</h1></div>
+            <div id="title-heat"><h1>Heat</h1></div>
+        </div>
+        <div id="sub-text">
+            We are team <b1>Hydro</b1><b>Heat</b>, a dedicated team from Fulford School who have found a better way to repurpose all of that money spent cooling computer systems.
+            
+        </div>
+        <div id="sub-sub-text">
+            We are: Kieran, Zak, Jonathan and Sam
+        </div>
+        <div id="flow-rate">
+            <h1>Flow Rate</h1>
+            <div id="flow-rate-num">
+                <h2>
+                    50
+                </h2>
+            </div>
+            <div id="slidebox">
+                <input type="button" value="-" id="minus">
+            
+                
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="100" value="60" class="slider" id="myRange">                  
+                </div>
+                <input type="button" value="+" id="plus">
+            </div>
+            
+        </div>
+        <div class="temp-chart-container">
+            <div id="temp-chart">
+                <!--add a toggle for the chart to go between CPU temps and pool temps-->
+                
+            </div>
+            <div id="chart2">
+
+            </div>
+        </div>
+
+    </body>
+</html>

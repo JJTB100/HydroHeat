@@ -1,53 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <title>HydroHeat</title>
-        <link rel="stylesheet" href="styles.css">
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Exo:wght@900&display=swap" rel="stylesheet">
+        <!--<script scc="https://www.google.com/jsapi"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+        <title>RiverSafe</title>
+        <link rel="stylesheet" href="menuStyle.css">
+            
     </head>
-    <body>
-        <script src="lib.js" async defer></script>
-        <div id="title">
-            <div id="title-hydro"><h1>Hydro</h1></div>
-            <div id="title-heat"><h1>Heat</h1></div>
-        </div>
-        <div id="sub-text">
-            We are team <b1>Hydro</b1><b>Heat</b>, a dedicated team from Fulford School who have found a better way to repurpose all of that money spent cooling computer systems.
-            
-        </div>
-        <div id="sub-sub-text">
-            We are: Kieran, Zak, Jonathan and Sam
-        </div>
-        <div id="flow-rate">
-            <h1>Flow Rate</h1>
-            <div id="flow-rate-num">
-                <h2>
-                    50
-                </h2>
-            </div>
-            <div id="slidebox">
-                <input type="button" value="-" id="minus">
-            
+        <body>
+            <a href="/" target="_blank">
+             
+                <div id="menu">
+                    <div id="menu-items">
+                        <a href="clock.html" class="menu-item"><p id="main-name">RiverSafe</p></a>
+                        <a href="controls.html" class="menu-item">Controls</a>
+                        <a href="inspiration.html" class="menu-item">About (Inspiration)</a>
+                        <a href="funhovering.html" class="menu-item">Contact Us (Gallery)</a>
+                        <a href="https://github.com/JJTB100/RiverSafe" class="menu-item">Code</a>
+                    </div>
+                    <div id="menu-background-image"></div>
+                    <div id="menu-background-pattern"></div>
                 
-                <div class="slidecontainer">
-                    <input type="range" min="0" max="100" value="60" class="slider" id="myRange">                  
                 </div>
-                <input type="button" value="+" id="plus">
-            </div>
-            
-        </div>
-        <div class="temp-chart-container">
-            <div id="temp-chart">
-                <!--add a toggle for the chart to go between CPU temps and pool temps-->
-                
-            </div>
-            <div id="chart2">
 
-            </div>
-        </div>
-
-    </body>
+        </body>
+        <script src="menuScript.js"></script>
 </html>
