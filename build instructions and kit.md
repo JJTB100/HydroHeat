@@ -86,7 +86,7 @@ CREATE USER 'hydroheat'@localhost IDENTIFIED BY 'Hydr0';
 GRANT ALL PRIVILAGES ON *.* TO 'hydroheat'@localhost IDENTIFIED BY 'Hydr0';
 ```
 
-You'll then need to set up the database. The tables and records you need are all stored [here]([url](https://github.com/JJTB100/HydroHeat/blob/main/hydroheat.sql))
+You'll then need to set up the database. The tables and records you need are all stored [here](https://github.com/JJTB100/HydroHeat/blob/main/hydroheat.sql)
 
 
 
