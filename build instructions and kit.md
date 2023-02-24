@@ -33,6 +33,13 @@
 sudo apt update
 sudo apt upgrade
 ```
+- Set the raspberry pi to boot into command line (for better server performance)
+```
+sudo raspi-config
+```
+Change System Options > Boot > Console
+When you exit, the Raspberry pi will reboot
+
 - (Login to any smoothwall)
 - install apache
 ```
@@ -70,11 +77,16 @@ mv index.html index.php
 sudo apt install php libapache2-mod-php php-mysql mariadb-server
 ```
 
+- Set up the database
 ``` sudo mysql -u root ```
-``` CREATE DATABASE hydroheat ```
-``` CREATE USER 'hydroheat'@localhost IDENTIFIED BY 'Hydr0' 
-GRANT ALL PRIVILAGES ON *.* TO 'hydroheat'@localhost IDENTIFIED BY 'Hydr0'
+
+Then enter these SQL commands
+``` CREATE DATABASE hydroheat;
+CREATE USER 'hydroheat'@localhost IDENTIFIED BY 'Hydr0'; 
+GRANT ALL PRIVILAGES ON *.* TO 'hydroheat'@localhost IDENTIFIED BY 'Hydr0';
 ```
+
+
 
 
 
