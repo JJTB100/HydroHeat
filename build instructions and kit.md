@@ -48,7 +48,7 @@ sudo nano /etc/apache2/sites-available/000-default.conf
 ```
 sudo ervice apache2 reload
 ```
--change permissions
+- change permissions
 ```
 chmod 777 www
 sudo nano /etc/apache2/sites-available/000-default.conf
@@ -61,14 +61,21 @@ Require all granted
 sudo chown -R hydroheat:www-data www
 
 ```
--rename index.html to index.php
+- rename index.html to index.php
 ```
 mv index.html index.php
 ```
--install php
+- install php
 ```
 sudo apt install php libapache2-mod-php php-mysql mariadb-server
 ```
+
+``` sudo mysql -u root ```
+``` CREATE DATABASE hydroheat ```
+``` CREATE USER 'hydroheat'@localhost IDENTIFIED BY 'Hydr0' 
+GRANT ALL PRIVILAGES ON *.* TO 'hydroheat'@localhost IDENTIFIED BY 'Hydr0'
+```
+
 
 
 
