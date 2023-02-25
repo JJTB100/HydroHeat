@@ -33,3 +33,67 @@
 sudo apt update
 sudo apt upgrade
 ```
+- Set the raspberry pi to boot into command line (for better server performance)
+```
+sudo raspi-config
+```
+Change System Options > Boot > Console
+When you exit, the Raspberry pi will reboot
+
+- (Login to any smoothwall)
+- install apache
+```
+sudo apt install apache2
+```
+- change directory of apache pointer
+```
+sudo nano /etc/apache2/sites-available/000-default.conf
+```
+- then change "var/www/" to where the file is e.g. "home/hydroheat/www"
+- reload site
+
+```
+sudo ervice apache2 reload
+```
+- change permissions
+```
+chmod 777 www
+sudo nano /etc/apache2/sites-available/000-default.conf
+
+<Location/>
+Allow Override All
+Require all granted
+<Location>
+
+sudo chown -R hydroheat:www-data www
+
+```
+- rename index.html to index.php
+```
+mv index.html index.php
+```
+- install php
+```
+sudo apt install php libapache2-mod-php php-mysql mariadb-server
+```
+
+- Set up the database
+``` sudo mysql -u root ```
+
+Then enter these SQL commands
+``` CREATE DATABASE hydroheat;
+CREATE USER 'hydroheat'@localhost IDENTIFIED BY 'Hydr0'; 
+GRANT ALL PRIVILAGES ON *.* TO 'hydroheat'@localhost IDENTIFIED BY 'Hydr0';
+```
+
+You'll then need to set up the database. The tables and records you need are all stored [here](https://github.com/JJTB100/HydroHeat/blob/main/hydroheat.sql)
+
+Note: for development we used [PhpMyAdmin](https://www.phpmyadmin.net/) to create the tables and export them. You can use this to import the tables or you can import them straight from the command line:
+
+```mysql -u hydroheat -p hydroheat < hydroheat.sql```
+
+
+
+
+
+
