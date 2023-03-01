@@ -68,13 +68,13 @@ Require all granted
 sudo chown -R hydroheat:www-data www
 
 ```
-- rename index.html to index.php
+- Install the python mysql connector
 ```
-mv index.html index.php
+pip install mysql-connector 
 ```
 - install php
 ```
-sudo apt install php libapache2-mod-php php-mysql mariadb-server
+sudo apt install php libapache2-mod-php php-mysql mariadb-server python
 ```
 
 - Set up the database
