@@ -11,7 +11,7 @@ body{
     color: var(--off-white);
     font-weight:bolder;
     font-family: "Roboto", sans-serif;
-    overflow: hidden;
+    overflow: scroll;   
 }
 b{
   color: var(--secondary-color);
@@ -164,3 +164,4 @@ b1{
 
 
 
+ 
