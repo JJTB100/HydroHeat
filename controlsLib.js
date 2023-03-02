@@ -32,6 +32,12 @@ slider.oninput = function() {
     slider.value = flowRate;
   }
 
+let sensors = {
+  CPU: 0,
+  GPU: 0,
+  Water: 0
+}
+
 google.charts.load('current', {'packages':['gauge']});
     google.charts.setOnLoadCallback(drawChart);
     
@@ -62,12 +68,14 @@ google.charts.load('current', {'packages':['gauge']});
       chart2.draw(data, options);
 
       setInterval(function() {
-        data.setValue(0, 1, 40 + Math.round(60 * Math.random()));
-        chart.draw(data, options);
-      }, 1000);
-      setInterval(function() {
-        data2.setValue(0, 1, 40 + Math.round(60 * Math.random()));
-        chart2.draw(data2, options);
-      }, 1000);
+	$.getJSON('api.php', {}).done((sensors) => {
+		console.log(data);
+	
+	        data.setValue(0, 1, sensors.CPU);
+        	chart.draw(data, options);
+	        data2.setValue(0, 1, sensors.GPU);
+        	chart2.draw(data2, options);
+	});
+      }, 5000);
     }
 
