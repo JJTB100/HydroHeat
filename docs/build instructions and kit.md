@@ -38,7 +38,23 @@ sudo apt upgrade
 sudo raspi-config
 ```
 Change System Options > Boot > Console
+
+
+- Enable 1 wire interfacing:
+
+Change Interface > 1 wire > yes
+
+
 When you exit, the Raspberry pi will reboot
+
+- Run the following code to enable the kernel module
+```
+sudo modprobe w1-gpio
+sudo modprobe w1-therm
+```
+
+
+
 
 - (Login to any smoothwall)
 - install apache
@@ -53,7 +69,7 @@ sudo nano /etc/apache2/sites-available/000-default.conf
 - reload site
 
 ```
-sudo ervice apache2 reload
+sudo service apache2 reload
 ```
 - change permissions
 ```
