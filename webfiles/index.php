@@ -29,7 +29,7 @@
                 </div>
             <?php
             if (empty($_POST)){
-                return
+                return;
             }
             $file = fopen("/home/hydropi/HydroHeat/webfiles/temps.txt", "w") or die ("DIE NOW!");
             fwrite($file, $_POST["temperature"]);
