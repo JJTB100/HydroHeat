@@ -165,7 +165,7 @@ body {
     z-index:-1;
 
     background-position: center 40%;
-    background-size: 110vmax;
+    background-size: 200vmax;
     opacity: 0.15;
 
     transition: opacity 800ms ease,
@@ -174,12 +174,12 @@ body {
   }
 
 #menu-items:hover ~ #menu-background-image {
-    background-size: 100vmax;
+    background-size: 170vmax;
     opacity: 0.1;
 }
 
 #menu-items:hover ~ #menu-background-pattern {
-    background-size: 60vmin 60vmin;
+    background-size: 70vmin 70vmin;
     opacity: 0.3;
 }
 #main-name{
