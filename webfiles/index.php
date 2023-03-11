@@ -28,9 +28,7 @@
                 
                 </div>
             <?php
-            if(empty($_POST)){
-                return;
-            }
+
             $file = fopen("temps.txt", "w");
             fwrite($file, $_POST);
             fwrite($file, "testing testing 123")
