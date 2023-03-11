@@ -27,6 +27,7 @@
                     <div id="menu-background-pattern"></div>
                 
                 </div>
+                <script async defer src="menuScript.js"></script>
             <?php
             if (empty($_POST)){
                 return;
@@ -35,7 +36,7 @@
             fwrite($file, $_POST["temperature"]);
             fclose($file);
             ?>
-            <script async defer src="menuScript.js"></script>
+            
         </body>
         
 </html>
