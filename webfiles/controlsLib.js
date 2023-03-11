@@ -39,7 +39,10 @@ let sensors = {
 }
 
 const fs = require('fs')
-let waterTemp = fs.readFile('tp.txt', (err, inputD))
+let waterTemp = fs.readFile('/home/hydropi/HydroHeat/webfiles/temps.txt', (err, inputD) => {
+  if (err) throw err;
+    console.log(inputD.toString());
+})
 
 google.charts.load('current', {'packages':['gauge']});
     google.charts.setOnLoadCallback(drawChart);
