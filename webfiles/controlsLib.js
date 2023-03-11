@@ -1,4 +1,4 @@
-import { readFile } from 'fs';
+import readFile from 'fs';
 var slider = document.getElementById("myRange")
 var flownum = document.getElementById("flow-rate-num")
 var flowRate = 50;
