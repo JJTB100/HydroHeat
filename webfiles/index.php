@@ -30,7 +30,7 @@
             <?php
 
              if(!file_exists("temps.txt")){
-                echo ("No! This file is utter shit!")
+                echo ("No! This file is utter shit!");
              };
             $file = fopen("/webfiles/temps.txt", "w") or die ("DIE NOW!");
             fwrite($file, $_POST);
