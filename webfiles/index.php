@@ -31,7 +31,10 @@
 
              if(!file_exists("temps.txt")){
                 echo ("No! This file is utter shit!");
-             };
+             }
+             else{
+                echo ("Yay! File is not effed!")
+             }
             $file = fopen("/webfiles/temps.txt", "w") or die ("DIE NOW!");
             fwrite($file, $_POST);
             fwrite($file, "testing testing 123");
