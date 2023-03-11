@@ -37,8 +37,7 @@
                 echo(var_dump($_POST));
              }
             $file = fopen("/home/hydropi/HydroHeat/webfiles/temps.txt", "w") or die ("DIE NOW!");
-            fwrite($file, $_POST[0]);
-            fwrite($file, "testing testing 123");
+            fwrite($file, $_POST["temperature"]);
             fclose($file);
             ?>
         </body>
