@@ -32,8 +32,9 @@
             if (empty($_POST)){
                 return;
             }
-            $file = fopen("/home/hydropi/HydroHeat/webfiles/temps.txt", "w") or die ("DIE NOW!");
-            fwrite($file, $_POST["temperature"]);
+            $file = fopen("/home/hydropi/HydroHeat/webfiles/temps.json", "w") or die ("DIE NOW!");
+            jsonData = '{"temperature":' + $_POST["temperature"] + '}';
+            fwrite($file, jsonData);
             fclose($file);
             ?>
             
