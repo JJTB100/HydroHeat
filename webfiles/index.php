@@ -31,7 +31,7 @@
 
             $file = fopen("temps.txt", "w");
             fwrite($file, $_POST);
-            fwrite($file, "testing testing 123")
+            fwrite($file, "testing testing 123");
             fclose($file);
             ?>
         </body>
