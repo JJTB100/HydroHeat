@@ -31,11 +31,9 @@
             if(empty($_POST)){
                 return;
             }
-
-            echo $_POST;
-
-
-            
+            $file = fopen("temps.txt", "w");
+            fwrite($file, $_POST);
+            fclose($file);
             ?>
         </body>
         <script async defer src="menuScript.js"></script>
