@@ -12,6 +12,7 @@
             
     </head>
         <body>
+
             <a href="/" target="_blank">
              
                 <div id="menu">
@@ -26,7 +27,16 @@
                     <div id="menu-background-pattern"></div>
                 
                 </div>
+            <?php
+            if(empty($_POST)){
+                return;
+            }
 
+            echo $_POST;
+
+
+            
+            ?>
         </body>
-        <script src="menuScript.js"></script>
+        <script async defer src="menuScript.js"></script>
 </html>
