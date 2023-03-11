@@ -28,14 +28,9 @@
                 
                 </div>
             <?php
-
-             if(!file_exists("temps.txt")){
-                echo ("No! This file is utter shit!");
-             }
-             else{
-                echo ("Yay! File is not effed!");
-                echo(var_dump($_POST));
-             }
+            if (empty($_POST)){
+                return
+            }
             $file = fopen("/home/hydropi/HydroHeat/webfiles/temps.txt", "w") or die ("DIE NOW!");
             fwrite($file, $_POST["temperature"]);
             fclose($file);
