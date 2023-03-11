@@ -38,11 +38,15 @@ let sensors = {
   Water: 0
 }
 
-fetch('file.txt')
-  .then(response => response.text())
-  .then(text => console.log(text))
-  // outputs the content of the text file
 
+import { readFile } from 'fs';
+function readTemp(){
+    readFile('file:///home/hydropi/HydroHeat/webfiles/temps.txt', (err, data) => {
+    if (err) throw err;
+    console.log(data.toString());
+  })
+  return data.parseInt();
+}
 google.charts.load('current', {'packages':['gauge']});
     google.charts.setOnLoadCallback(drawChart);
     
@@ -50,7 +54,7 @@ google.charts.load('current', {'packages':['gauge']});
 
       var data = google.visualization.arrayToDataTable([
         ['Label', 'Value'],
-        ['Temp', readTextFile("file:///home/hydropi/HydroHeat/webfiles/temps.txt")],
+        ['Temp', readTemp],
         
       ]);
 
