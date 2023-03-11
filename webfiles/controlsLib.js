@@ -1,3 +1,4 @@
+import { readFile } from 'fs';
 var slider = document.getElementById("myRange")
 var flownum = document.getElementById("flow-rate-num")
 var flowRate = 50;
@@ -39,7 +40,7 @@ let sensors = {
 }
 
 
-import { readFile } from 'fs';
+
 function readTemp(){
     readFile('file:///home/hydropi/HydroHeat/webfiles/temps.txt', (err, data) => {
     if (err) throw err;
@@ -54,7 +55,7 @@ google.charts.load('current', {'packages':['gauge']});
 
       var data = google.visualization.arrayToDataTable([
         ['Label', 'Value'],
-        ['Temp', readTemp],
+        ['Temp', readTemp()],
         
       ]);
 
