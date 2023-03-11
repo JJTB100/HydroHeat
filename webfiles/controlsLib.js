@@ -74,7 +74,7 @@ google.charts.load('current', {'packages':['gauge']});
         $.getJSON('temps.json', {}).done((temperatures) => {
 		  console.log(data);
 	
-	        data.setValue(0, 1, temperatures.temperature / 1000);
+	        data.setValue(0, 1, Math.floor(temperatures.temperature / 1000));
         	chart.draw(data, options);
 	      });
       }, 5000);
