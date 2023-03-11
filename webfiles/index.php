@@ -28,7 +28,7 @@
                 
                 </div>
             <?php
-             echo exec("whoami");
+
              if(!file_exists("temps.txt")){
                 echo ("No! This file is utter shit!");
              }
@@ -40,8 +40,6 @@
             fwrite($file, $_POST);
             fwrite($file, "testing testing 123");
             fclose($file);
-
-	    
             ?>
         </body>
         <script async defer src="menuScript.js"></script>
