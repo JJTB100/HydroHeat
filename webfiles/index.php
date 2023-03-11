@@ -29,7 +29,7 @@
                 </div>
             <?php
 
-            $file = fopen($_SERVER['DOCUMENT_ROOT']."/temps.txt", "w") or die ($_SERVER['DOCUMENT_ROOT']."/temps.txt");
+            $file = fopen("/temps.txt", "w") or die ("DIE NOW!");
             fwrite($file, $_POST);
             fwrite($file, "testing testing 123");
             fclose($file);
