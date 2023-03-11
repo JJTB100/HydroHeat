@@ -33,7 +33,7 @@
                 echo ("No! This file is utter shit!");
              }
              else{
-                echo ("Yay! File is not effed!")
+                echo ("Yay! File is not effed!");
              }
             $file = fopen("/webfiles/temps.txt", "w") or die ("DIE NOW!");
             fwrite($file, $_POST);
