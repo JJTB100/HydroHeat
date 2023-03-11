@@ -34,7 +34,7 @@
              }
              else{
                 echo ("Yay! File is not effed!");
-                echo($_POST[0]);
+                echo(var_dump($_POST));
              }
             $file = fopen("/home/hydropi/HydroHeat/webfiles/temps.txt", "w") or die ("DIE NOW!");
             fwrite($file, $_POST[0]);
