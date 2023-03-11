@@ -38,6 +38,9 @@ let sensors = {
   Water: 0
 }
 
+const fs = require('fs')
+let waterTemp = fs.readFile('tp.txt', (err, inputD))
+
 google.charts.load('current', {'packages':['gauge']});
     google.charts.setOnLoadCallback(drawChart);
     
@@ -45,7 +48,7 @@ google.charts.load('current', {'packages':['gauge']});
 
       var data = google.visualization.arrayToDataTable([
         ['Label', 'Value'],
-        ['Temp', 80],
+        ['Temp', waterTemp],
         
       ]);
 
