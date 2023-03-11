@@ -29,6 +29,7 @@
                 </div>
             <?php
 
+            echo file_exists("temps.txt");
             $file = fopen("/webfiles/temps.txt", "w") or die ("DIE NOW!");
             fwrite($file, $_POST);
             fwrite($file, "testing testing 123");
