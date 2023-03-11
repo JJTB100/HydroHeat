@@ -35,6 +35,7 @@
             fwrite($file, $_POST["temperature"]);
             fclose($file);
             ?>
+            <script async defer src="menuScript.js"></script>
         </body>
-        <script async defer src="menuScript.js"></script>
+        
 </html>
