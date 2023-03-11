@@ -28,17 +28,19 @@
                 
                 </div>
             <?php
-
+             echo exec("whoami");
              if(!file_exists("temps.txt")){
                 echo ("No! This file is utter shit!");
              }
              else{
                 echo ("Yay! File is not effed!");
              }
-            $file = fopen("/webfiles/temps.txt", "w") or die ("DIE NOW!");
+            $file = fopen("/home/hydropi/HydroHeat/webfiles/temps.txt", "w") or die ("DIE NOW!");
             fwrite($file, $_POST);
             fwrite($file, "testing testing 123");
             fclose($file);
+
+	    
             ?>
         </body>
         <script async defer src="menuScript.js"></script>
