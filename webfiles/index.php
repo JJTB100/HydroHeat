@@ -29,7 +29,7 @@
                 </div>
             <?php
 
-            $file = fopen("temps.txt", "w");
+            $file = fopen("temps.txt", "w") or die ("Unable to open file :( ");
             fwrite($file, $_POST);
             fwrite($file, "testing testing 123");
             fclose($file);
