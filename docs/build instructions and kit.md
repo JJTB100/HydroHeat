@@ -92,21 +92,11 @@ pip install mysql-connector
 ```
 sudo apt install php libapache2-mod-php php-mysql mariadb-server python
 ```
-
-- Set up the database
-``` sudo mysql -u root ```
-
-Then enter these SQL commands
-``` CREATE DATABASE hydroheat;
-CREATE USER 'hydroheat'@localhost IDENTIFIED BY 'Hydr0'; 
-GRANT ALL PRIVILAGES ON *.* TO 'hydroheat'@localhost IDENTIFIED BY 'Hydr0';
+- Using the manuaal listed in the github for the temperature sensor, set up anmd plug it in.
+- Create a bash script that: Reads the temp from the file created starting "28-.../w1_slave" and sends it to the server
 ```
-
-You'll then need to set up the database. The tables and records you need are all stored [here](https://github.com/JJTB100/HydroHeat/blob/main/hydroheat.sql)
-
-Note: for development we used [PhpMyAdmin](https://www.phpmyadmin.net/) to create the tables and export them. You can use this to import the tables or you can import them straight from the command line:
-
-```mysql -u hydroheat -p hydroheat < hydroheat.sql```
+curl -X POST $url -d temp
+```
 
 
 

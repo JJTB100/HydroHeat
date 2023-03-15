@@ -1,5 +1,5 @@
-var slider = document.getElementById("myRange")
-var flownum = document.getElementById("flow-rate-num")
+var slider = document.getElementById("myRange");
+var flownum = document.getElementById("flow-rate-num");
 var flowRate = 50;
 var plus = document.getElementById("plus");
 var minus = document.getElementById("minus");
@@ -38,11 +38,14 @@ let sensors = {
   Water: 0
 }
 
+let temperatures = {
+  temperature: 0
+}
+
 google.charts.load('current', {'packages':['gauge']});
     google.charts.setOnLoadCallback(drawChart);
     
     function drawChart() {
-
       var data = google.visualization.arrayToDataTable([
         ['Label', 'Value'],
         ['Temp', 80],
@@ -69,14 +72,12 @@ google.charts.load('current', {'packages':['gauge']});
       chart2.draw(data, options);
 
       setInterval(function() {
-	$.getJSON('api.php', {}).done((sensors) => {
-		console.log(data);
+        $.getJSON('temps.json', {}).done((temperatures) => {
+		  console.log(data);
 	
-	        data.setValue(0, 1, sensors.CPU);
+	        data.setValue(0, 1, Math.floor(temperatures.temperature / 1000));
         	chart.draw(data, options);
-	        data2.setValue(0, 1, sensors.GPU);
-        	chart2.draw(data2, options);
-	});
+	      });
       }, 5000);
     }
 

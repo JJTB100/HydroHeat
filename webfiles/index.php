@@ -12,13 +12,14 @@
             
     </head>
         <body>
+
             <a href="/" target="_blank">
              
                 <div id="menu">
                     <div id="menu-items">
                         <a href="" class="menu-item"><span id="main-name">Hydro</span><span id="main-name-heat">Heat</span></a>
                         <a href="controls.html" class="menu-item">Controls</a>
-                        <a href="" class="menu-item">About</a>
+                        <a href="about.html" class="menu-item">About</a>
                         <a href="funhovering.html" class="menu-item">Gallery</a>
                         <a href="https://github.com/JJTB100/HydroHeat" class="menu-item">Code</a>
                     </div>
@@ -26,7 +27,17 @@
                     <div id="menu-background-pattern"></div>
                 
                 </div>
-
+                <script async defer src="menuScript.js"></script>
+            <?php
+            if (empty($_POST)){
+                return;
+            }
+            $file = fopen("/home/hydropi/HydroHeat/webfiles/temps.json", "w") or die ("DIE NOW!");
+            $jsonData = '{"temperature":'.$_POST["temperature"].'}';
+            fwrite($file, $jsonData);
+            fclose($file);
+            ?>
+            
         </body>
-        <script src="menuScript.js"></script>
+        
 </html>
