@@ -48,15 +48,15 @@ google.charts.load('current', {'packages':['gauge']});
     function drawChart() {
       var data = google.visualization.arrayToDataTable([
         ['Label', 'Value'],
-        ['Temp', 80],
+        ['Temp', 53],
         
       ]);
 
       var data2 = google.visualization.arrayToDataTable([
         ['Label', 'Value'],
-        ['Gauge', 80],
+        ['Gauge', 21.562],
         
-      ]);
+      ]); 
 
       var options = {
         redFrom: 90, redTo: 100, redColor: '#D84727', greenColor: '#31AFD4', greenFrom: 0, greenTo: 75,
@@ -76,6 +76,7 @@ google.charts.load('current', {'packages':['gauge']});
 		  console.log(data);
 	
 	        data.setValue(0, 1, Math.floor(temperatures.temperature / 1000));
+          //data.setValue(0, 1, (Math.random() * 5) + 20);
         	chart.draw(data, options);
 	      });
       }, 5000);
