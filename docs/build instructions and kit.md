@@ -100,9 +100,14 @@ sudo apt install php libapache2-mod-php php-mysql mariadb-server python
 
 ### Setting up the client
 - Using the manual listed in the github for the temperature sensor, set up and plug it in.
-![1679309759619](https://user-images.githubusercontent.com/99484954/226320065-ecfb2644-ca52-4511-957d-bb02c158625e.jpg)
-The manual instructed that the (in our case blue wire) was connected between the 3V3 power on the Pi to the positive rail of the breadboard
-Then the green wire would be connected to the ground on the Pi and to the negative rail of the breadboard
+- The manual instructed how we set up our wires first to the Pi
+  - The (in our case) blue wire was connected between the 3V3 power on the Pi to the positive rail of the breadboard
+  - The green wire would be connected to the ground on the Pi and to the negative rail of the breadboard
+  - The yellow wire would be connected to a horizontal area of the main breadboard
+- Then the wires from the probe
+  - Red is connected to the positive rail below the connection to the pi
+  - Black is similarly connected to the negative rail
+  - Yellow goes to the right of the pin on the main breadboard with a 3.3KOhm resistor between them and between the positive red wire and pin
 
 
 
