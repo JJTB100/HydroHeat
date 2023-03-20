@@ -154,13 +154,12 @@ MotorOn(m, 1)
 time.sleep(500)
 m.disable()
 ```
-
 ### The prototype
 - Setting up the prototype or real product is quite simple with the motor going on one side of the water resevoir
 - The temperature sensor on the other side
 - The tubing for the water through the motor passes into the heat sink which is on top of the electronics (using thermal paste or a thermally conductive divider)
 - Then passes out the heat sink and into the side of the pool with the temperature sensor
-- ![IMG_20230315_103846_528](https://user-images.githubusercontent.com/99484954/226316971-d55efad8-be32-41f8-8474-9c25e23a30d1.jpg)
+![IMG_20230315_103846_528](https://user-images.githubusercontent.com/99484954/226316971-d55efad8-be32-41f8-8474-9c25e23a30d1.jpg)
 
 ### Final overview
 ![IMG_20230315_103859_837](https://user-images.githubusercontent.com/99484954/226317004-e5064fe9-f72d-47cc-aa9b-ac1ab835709e.jpg)
