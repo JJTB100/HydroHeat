@@ -97,11 +97,32 @@ pip install mysql-connector
 ```
 sudo apt install php libapache2-mod-php php-mysql mariadb-server python
 ```
-- Using the manuaal listed in the github for the temperature sensor, set up anmd plug it in.
+- Using the manual listed in the github for the temperature sensor, set up and plug it in.
 - Create a bash script that: Reads the temp from the file created starting "28-.../w1_slave" and sends it to the server
 ```
-curl -X POST $url -d temp
+#!/bin/bash
+url='jonathan.broster.co.uk'
+
+for i in 1 2 3 4 5 6 7 8 9 10 11 12
+do
+  value=`cat /sys/bus/w1/devices/28-.../w1_slave`
+  temp=${value:69}
+  curl -X POST $url -d "temperature=$temp"
+  echo $temp >> /home/hydroheat/scripts/tempLog.txt
+  sleep 5
+done
 ```
+This will read the temperature every 5 seconds for a minute and send it to the server hosted on jonathan.broster.co.uk
+Then using a crontab we set the script to run every minute from startup
+```
+crontab -e
+```
+This opens the crontab setup file and we need to append the schedule
+```
+* * * * * /home/hydroheat/scripts/readTemp.sh
+```
+
+
 
 
 
