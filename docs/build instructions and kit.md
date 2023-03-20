@@ -97,8 +97,16 @@ pip install mysql-connector
 ```
 sudo apt install php libapache2-mod-php php-mysql mariadb-server python
 ```
+
+### Setting up the client
 - Using the manual listed in the github for the temperature sensor, set up and plug it in.
-- Create a bash script that: Reads the temp from the file created starting "28-.../w1_slave" and sends it to the server
+![1679309759619](https://user-images.githubusercontent.com/99484954/226320065-ecfb2644-ca52-4511-957d-bb02c158625e.jpg)
+The manual instructed that the (in our case blue wire) was connected between the 3V3 power on the Pi to the positive rail of the breadboard
+Then the green wire would be connected to the ground on the Pi and to the negative rail of the breadboard
+
+
+
+- Create a bash script that reads the temp from the file created starting "28-.../w1_slave" and sends it to the server
 ```
 #!/bin/bash
 url='jonathan.broster.co.uk'
@@ -123,7 +131,7 @@ This opens the crontab setup file and we need to append the schedule
 ```
 
 
-![1679309759619](https://user-images.githubusercontent.com/99484954/226320065-ecfb2644-ca52-4511-957d-bb02c158625e.jpg)
+
 
 ![1679309773993](https://user-images.githubusercontent.com/99484954/226320136-579a539c-d181-41f3-9ed3-c2f856e37cd3.jpg)
 
