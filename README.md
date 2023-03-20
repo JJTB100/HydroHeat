@@ -1,8 +1,8 @@
 # HydroHeat
 Taking heat from servers and using it to heat houses.
 
-Build instructions: https://github.com/JJTB100/HydroHeat/blob/main/docs/build%20instructions%20and%20kit.md
-Website hosted on: http://jonathan.broster.co.uk
+- Build instructions: https://github.com/JJTB100/HydroHeat/blob/main/docs/build%20instructions%20and%20kit.md
+- Website hosted on: http://jonathan.broster.co.uk
 
 # Background and context:
 Education has recently joined the global call to action to mitigate the impact of the
