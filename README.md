@@ -39,3 +39,5 @@ This has exponential possibilities as we can even extract energy using latent he
 need to do so in the future. Reducing environmental impact and creating an eco-system
 that becomes self-sustaining.
 
+![image](https://user-images.githubusercontent.com/99484954/226317568-245c4f5b-f572-42dc-b456-3ee63e09e4c9.png)
+
