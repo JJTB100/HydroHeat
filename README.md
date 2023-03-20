@@ -10,7 +10,7 @@ mySQL pswd: Hydr0
 
 Summary of progress: https://github.com/JJTB100/HydroHeat/milestones
 
-jonathan@broster.co.uk is the website
+jonathan.broster.co.uk is the website
 
 Background and context:
 Education has recently joined the global call to action to mitigate the impact of the
