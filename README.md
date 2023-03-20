@@ -39,4 +39,3 @@ This has exponential possibilities as we can even extract energy using latent he
 need to do so in the future. Reducing environmental impact and creating an eco-system
 that becomes self-sustaining.
 
-Commercial opportunity
