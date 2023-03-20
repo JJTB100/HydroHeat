@@ -12,7 +12,6 @@
 
 ![IMG_20230320_103439_764](https://user-images.githubusercontent.com/99484954/226316866-9008f346-008a-4f28-8cb4-ee03ccb1b19c.jpg)
 ![IMG_20230315_103846_528](https://user-images.githubusercontent.com/99484954/226316971-d55efad8-be32-41f8-8474-9c25e23a30d1.jpg)
-![IMG_20230315_103859_837](https://user-images.githubusercontent.com/99484954/226317004-e5064fe9-f72d-47cc-aa9b-ac1ab835709e.jpg)
 
 
 # Build Guide:
@@ -140,7 +139,11 @@ crontab -e
 - First the motor needs to be plugged into the motor pins where we have used pins 8 and 9
 - The red wire goes into +1
 - The black wire goes into -1
+
+\n
 ![1679309773993](https://user-images.githubusercontent.com/99484954/226320136-579a539c-d181-41f3-9ed3-c2f856e37cd3.jpg)
+\n
+
 - Then by plugging the Pico into another machine it can be accessed using thonny
 - The pimoroni micropython script can be installed from https://github.com/pimoroni/pimoroni-pico/releases/tag/v1.19.17 and then using thonny transferred onto the Pico
 - Then upload a script titled 'main.py' (has to be exactly that name) which will be run on startup
@@ -161,6 +164,10 @@ MotorOn(m, 1)
 time.sleep(500)
 m.disable()
 ```
+
+### Final overview
+![IMG_20230315_103859_837](https://user-images.githubusercontent.com/99484954/226317004-e5064fe9-f72d-47cc-aa9b-ac1ab835709e.jpg)
+
 
 #https://opensource.com/article/20/5/usb-port-raspberry-pi-python
 #https://stackoverflow.com/questions/72862216/how-to-use-read-data-from-computer-using-a-pi-pico-running-micropython
