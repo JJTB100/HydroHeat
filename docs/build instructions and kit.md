@@ -10,10 +10,6 @@
 |Lego swimming pool                                                                                                                 |N/A   | 1      |
 
 
-![IMG_20230320_103439_764](https://user-images.githubusercontent.com/99484954/226316866-9008f346-008a-4f28-8cb4-ee03ccb1b19c.jpg)
-![IMG_20230315_103846_528](https://user-images.githubusercontent.com/99484954/226316971-d55efad8-be32-41f8-8474-9c25e23a30d1.jpg)
-
-
 # Build Guide:
 
 ## Setting up the raspberry pi
@@ -159,9 +155,21 @@ time.sleep(500)
 m.disable()
 ```
 
+### The prototype
+- Setting up the prototype or real product is quite simple with the motor going on one side of the water resevoir
+- The temperature sensor on the other side
+- The tubing for the water through the motor passes into the heat sink which is on top of the electronics (using thermal paste or a thermally conductive divider)
+- Then passes out the heat sink and into the side of the pool with the temperature sensor
+- ![IMG_20230315_103846_528](https://user-images.githubusercontent.com/99484954/226316971-d55efad8-be32-41f8-8474-9c25e23a30d1.jpg)
+
 ### Final overview
 ![IMG_20230315_103859_837](https://user-images.githubusercontent.com/99484954/226317004-e5064fe9-f72d-47cc-aa9b-ac1ab835709e.jpg)
-- The final product should include
+- The final product should include:
+  - A raspberry pi server set up and hosted on the internet
+  - A raspberry pi client shown in the image with pins connected to a breadboard and powered by a battery pack
+  - A breadboard which the raspberry pi pins and temperature sensor wires are both connected to
+  - A pico connected to a motor (can be plugged into raspberry pi to start)
+  - A reservoir of water which the motor is on one side and the temperature sensor on the other
 
 #https://opensource.com/article/20/5/usb-port-raspberry-pi-python
 #https://stackoverflow.com/questions/72862216/how-to-use-read-data-from-computer-using-a-pi-pico-running-micropython
