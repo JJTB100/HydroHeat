@@ -107,7 +107,7 @@ sudo apt install php libapache2-mod-php php-mysql mariadb-server python
 - Then the wires from the probe
   - Red is connected to the positive rail below the connection to the pi
   - Black is similarly connected to the negative rail
-  - Yellow goes to the right of the pin on the main breadboard with a 3.3KOhm resistor between them and between the positive red wire and pin
+  - Yellow goes to the right of the pin on the main breadboard with a 4.7KOhm resistor between them and between the positive red wire and pin
 
 ![1679310101514](https://user-images.githubusercontent.com/99484954/226321406-028f1dbb-6145-4c02-82df-71afdcc41945.jpg)
 
@@ -136,31 +136,32 @@ crontab -e
 * * * * * /home/hydroheat/scripts/readTemp.sh
 ```
 
-
-
-
+### Setting up the pico
+- First the motor needs to be plugged into the motor pins where we have used pins 8 and 9
+- The red wire goes into +1
+- The black wire goes into -1
 ![1679309773993](https://user-images.githubusercontent.com/99484954/226320136-579a539c-d181-41f3-9ed3-c2f856e37cd3.jpg)
+- Then by plugging the Pico into another machine it can be accessed using thonny
+- The pimoroni micropython script can be installed from https://github.com/pimoroni/pimoroni-pico/releases/tag/v1.19.17 and then 
+- This can be used to upload a script titled 'main.py' (has to be exactly) which will be run on startup
+- 
 
-
+```
 from motor import Motor
 import time
 
 m = Motor((8,9))
-m2 = Motor((10,11))
-
 
 #motor, speed,(-1 to 1)
-def MotorOn(m1, m2, speed):
+def MotorOn(m1, speed):
     m1.enable()
     m1.speed(speed)
-    m2.enable()
-    m2.speed(-speed)
 
-
-MotorOn(m, m2, 1)
+MotorOn(m, 1)
 time.sleep(500)
 m.disable()
 m2.disable()
+```
 
 #https://opensource.com/article/20/5/usb-port-raspberry-pi-python
 #https://stackoverflow.com/questions/72862216/how-to-use-read-data-from-computer-using-a-pi-pico-running-micropython
