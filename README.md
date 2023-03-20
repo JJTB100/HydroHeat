@@ -1,16 +1,8 @@
 # HydroHeat
 Taking heat from servers and using it to heat houses.
 
-Mindmap Planning: https://coggle.it/diagram/Y-I8KpL8sXIrVAbj/t/hydroheat
-
-Rpi Username: hydropi
-Password: hydroheat
-mySQL pswd: Hydr0
-
-
-Summary of progress: https://github.com/JJTB100/HydroHeat/milestones
-
-http://jonathan.broster.co.uk is the website
+Build instructions: https://github.com/JJTB100/HydroHeat/blob/main/docs/build%20instructions%20and%20kit.md
+Website hosted on: http://jonathan.broster.co.uk
 
 # Background and context:
 Education has recently joined the global call to action to mitigate the impact of the
