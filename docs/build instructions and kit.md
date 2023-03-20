@@ -86,8 +86,8 @@ sudo chown -R hydroheat:www-data www
 sudo apt install php libapache2-mod-php
 ```
 
-- As shown in the webfiles the php scripts are able to pull the temperature from the client pi and save these to a text file
-- This text file is read from in order to update the website to have a live show of the current temperature when the client is running
+- As shown in the webfiles the php scripts are able to pull the temperature from the client pi and save these to a json file
+- This json file is read by the server in order to update the website to have a live show of the current temperature when the client is running
 
 ### Setting up the client
 - Using the manual listed in the github for the temperature sensor, set up and plug it in.
