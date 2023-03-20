@@ -126,12 +126,12 @@ do
   sleep 5
 done
 ```
-This will read the temperature every 5 seconds for a minute and send it to the server hosted on jonathan.broster.co.uk
-Then using a crontab we set the script to run every minute from startup
+- This will read the temperature every 5 seconds for a minute and send it to the server hosted on jonathan.broster.co.uk
+- Then using a crontab we set the script to run every minute from startup
 ```
 crontab -e
 ```
-This opens the crontab setup file and we need to append the schedule
+- This opens the crontab setup file and then we need to append the schedule
 ```
 * * * * * /home/hydroheat/scripts/readTemp.sh
 ```
