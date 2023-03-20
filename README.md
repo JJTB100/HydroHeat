@@ -4,31 +4,15 @@ Taking heat from servers and using it to heat houses.
 - Build instructions: https://github.com/JJTB100/HydroHeat/blob/main/docs/build%20instructions%20and%20kit.md
 - Website hosted on: http://jonathan.broster.co.uk
 
-# Background and context:
-Education has recently joined the global call to action to mitigate the impact of the
-environmental crisis. As students at Fulford school we want to be part of the answer.
-Developing sustainable scalable solutions which educate innovate and inspire the next
-generation to be self-sustaining.
-
 # Problem:
-The move to cloud computing has been instrumental in reducing the carbon footprint of
-organisations and supporting the work towards net zero. The challenge facing smaller
-organisations /educational institutions is the prohibitive cost of replacing on premise
-solutions in an achievable way.
+The technologies of the future all rely on cloud hosting, AI and big data. The UK currently lacks capacity as a cloud computing superpower so UK businesses rely on oversees infrastructure which can cause problems for speed, privacy and growth.
+The data centres that are necessary to provide cloud services each require vast amounts of electricity and produce significant quantities of heat in the process. Consequently, expensive cooling solutions are required which increases the carbon footprint especially if non sustainable energy sources are used.
+Across the country, energy costs have risen to the point where many small businesses and social enterprises are struggling or are facing closure, with significant negative impact on local communities.
 
-# Our problem statement:
-How can small organisations proactively react to become instrumental in the solution to
-sustainability and lowering energy costs whilst continuing to operate an on-premise
-solution.
-
-# Solution
-Our solution is to create a sustainable source of heat that allows companies to
-simultaneously save money and help the environment. Our concept looks to wrap a
-water-cooling system around on premise servers to absorb the heat. This hot water could then be used to transfer the energy into buildings via their central heating system.
-The cooled water can then be recycled back into the server rooms completing the cycle
-This has exponential possibilities as we can even extract energy using latent heat if we
-need to do so in the future. Reducing environmental impact and creating an eco-system
-that becomes self-sustaining.
-
-![image](https://user-images.githubusercontent.com/99484954/226317568-245c4f5b-f572-42dc-b456-3ee63e09e4c9.png)
-
+# Our solution:  
+HydroHeat has developed a solution that enables small businesses to generate revenue whilst reducing their carbon footprint as well as making substantial savings on heating costs. 
+Our working prototype features a small community swimming pool that has an on-site cloud computing data centre represented by a raspberry pi web server. Our protype uses a solar panel to power the data centre and to extract the heat, redirecting all of that energy to heat the swimming pool. 
+Our research has shown that a community enterprise could save over £20,000 per year on heating costs whilst reducing reliance on fossil fuels whilst also having access to cutting edge cloud computing infrastructure on-site. 
+HydroHeat helps accelerate energy transition by using sustainable solar power to replace non renewable heating systems. The UK Government has recently announced £63m of funding to help leisure centres with their energy costs. They have also announced £900m of investment in building the UK supercomputing capacity of the future. HydroHeat represents a scalable, distributed model of achieving both of these goals which would kick start investment across the country, reduce carbon footprint and prevent vital community facilities from closure. 
+In a traditional data centre, almost all electrical energy used to power the computers is lost as heat, requiring additional energy to prevent them from overheating. A large data centre could spend over £3million on energy costs with up to 55% of that being used to the heat generated as waste.
+HydroHeat solves problem by distributing small data centres around the country with each one being powered by sustainable sources (solar panels). All of the heat generated can then be repurposed to benefit social enterprises such as community swimming pools, who could then generate revenue by renting premises to data hosting companies as well as saving on their own heating bills.  
