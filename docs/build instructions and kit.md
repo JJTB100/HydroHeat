@@ -8,6 +8,7 @@
 |[Submersible water pump](https://www.amazon.co.uk/dp/B0971BGTTG?psc=1&ref=ppx_yo2ov_dt_b_product_details)                          |£15.99| 4      |
 |[Water heat sink](https://www.amazon.co.uk/dp/B078MK5GG9?psc=1&ref=ppx_yo2ov_dt_b_product_details)                                 |£6.99 | 2      |
 |Lego swimming pool                                                                                                                 |N/A   | 1      |
+|[Pico](https://www.amazon.co.uk/Pimoroni-Pico-Explorer-Base/dp/B08YZ7ZKCF/ref=sr_1_1?keywords=pico+explorer&qid=1679314195&sr=8-1) |£24.90| 1      |
 
 
 # Build Guide:
@@ -80,14 +81,13 @@ Require all granted
 
 sudo chown -R hydroheat:www-data www
 ```
-- Install the python mysql connector
-```
-pip install mysql-connector 
-```
 - install php
 ```
-sudo apt install php libapache2-mod-php php-mysql mariadb-server python
+sudo apt install php libapache2-mod-php
 ```
+
+- As shown in the webfiles the php scripts are able to pull the temperature from the client pi and save these to a text file
+- This text file is read from in order to update the website to have a live show of the current temperature when the client is running
 
 ### Setting up the client
 - Using the manual listed in the github for the temperature sensor, set up and plug it in.
