@@ -142,9 +142,9 @@ crontab -e
 - The black wire goes into -1
 ![1679309773993](https://user-images.githubusercontent.com/99484954/226320136-579a539c-d181-41f3-9ed3-c2f856e37cd3.jpg)
 - Then by plugging the Pico into another machine it can be accessed using thonny
-- The pimoroni micropython script can be installed from https://github.com/pimoroni/pimoroni-pico/releases/tag/v1.19.17 and then 
-- This can be used to upload a script titled 'main.py' (has to be exactly) which will be run on startup
-- 
+- The pimoroni micropython script can be installed from https://github.com/pimoroni/pimoroni-pico/releases/tag/v1.19.17 and then using thonny transferred onto the Pico
+- Then upload a script titled 'main.py' (has to be exactly that name) which will be run on startup
+- The script will turn on the motors as shown below for 500 seconds, the script will stop when the pico is unplugged or 500 seconds have passed
 
 ```
 from motor import Motor
@@ -160,7 +160,6 @@ def MotorOn(m1, speed):
 MotorOn(m, 1)
 time.sleep(500)
 m.disable()
-m2.disable()
 ```
 
 #https://opensource.com/article/20/5/usb-port-raspberry-pi-python
