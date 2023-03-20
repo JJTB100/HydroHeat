@@ -131,6 +131,7 @@ This opens the crontab setup file and we need to append the schedule
 ```
 
 
+![1679310101514](https://user-images.githubusercontent.com/99484954/226321406-028f1dbb-6145-4c02-82df-71afdcc41945.jpg)
 
 
 ![1679309773993](https://user-images.githubusercontent.com/99484954/226320136-579a539c-d181-41f3-9ed3-c2f856e37cd3.jpg)
