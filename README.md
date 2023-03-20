@@ -4,6 +4,9 @@ Taking heat from servers and using it to heat houses.
 - Build instructions: https://github.com/JJTB100/HydroHeat/blob/main/docs/build%20instructions%20and%20kit.md
 - Website hosted on: http://jonathan.broster.co.uk
 
+YouTube summary: https://youtu.be/5gIR6OQXqZY
+
+
 # Problem:
 The technologies of the future all rely on cloud hosting, AI and big data. The UK currently lacks capacity as a cloud computing superpower so UK businesses rely on oversees infrastructure which can cause problems for speed, privacy and growth.
 The data centres that are necessary to provide cloud services each require vast amounts of electricity and produce significant quantities of heat in the process. Consequently, expensive cooling solutions are required which increases the carbon footprint especially if non sustainable energy sources are used.
