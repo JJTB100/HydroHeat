@@ -57,9 +57,6 @@ sudo modprobe w1-gpio
 sudo modprobe w1-therm
 ```
 
-
-
-
 - (Login to any smoothwall)
 - install apache
 ```
@@ -86,7 +83,6 @@ Require all granted
 <Location>
 
 sudo chown -R hydroheat:www-data www
-
 ```
 - Install the python mysql connector
 ```
@@ -140,9 +136,7 @@ crontab -e
 - The red wire goes into +1
 - The black wire goes into -1
 
-\n
 ![1679309773993](https://user-images.githubusercontent.com/99484954/226320136-579a539c-d181-41f3-9ed3-c2f856e37cd3.jpg)
-\n
 
 - Then by plugging the Pico into another machine it can be accessed using thonny
 - The pimoroni micropython script can be installed from https://github.com/pimoroni/pimoroni-pico/releases/tag/v1.19.17 and then using thonny transferred onto the Pico
@@ -167,7 +161,7 @@ m.disable()
 
 ### Final overview
 ![IMG_20230315_103859_837](https://user-images.githubusercontent.com/99484954/226317004-e5064fe9-f72d-47cc-aa9b-ac1ab835709e.jpg)
-
+- The final product should include
 
 #https://opensource.com/article/20/5/usb-port-raspberry-pi-python
 #https://stackoverflow.com/questions/72862216/how-to-use-read-data-from-computer-using-a-pi-pico-running-micropython
