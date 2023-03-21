@@ -20,7 +20,7 @@
                         <a href="" class="menu-item"><span id="main-name">Hydro</span><span id="main-name-heat">Heat</span></a>
                         <a href="controls.html" class="menu-item">Controls</a>
                         <a href="about.html" class="menu-item">About</a>
-                        <a href="fuhovering.html" class="menu-item">Gallery</a>
+                        <a href="funhovering.html" class="menu-item">Gallery</a>
                         <a href="https://github.com/JJTB100/HydroHeat" class="menu-item">Code</a>
                     </div>
                     <div id="menu-background-image"></div>
