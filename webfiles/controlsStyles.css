@@ -11,7 +11,7 @@ body{
     color: var(--off-white);
     font-weight:bolder;
     font-family: "Roboto", sans-serif;
-    overflow: hidden;   
+    overflow: none;   
 }
 b{
   color: var(--secondary-color);
