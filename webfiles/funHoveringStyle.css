@@ -4,7 +4,20 @@ body {
     margin: 0px;
     overflow: hidden;
 }
-
+.home{
+    width: 3%;
+    height: 3%;
+    filter: invert(0.9);
+    margin-left: 1%;
+    margin-top: 1%;
+    position: absolute;
+    transition:400ms;
+    z-index: 10;
+  }
+  .home:hover{
+    width: 4%;
+    height: 4%;
+  }
 #gallery {
     height: 140vmax;
     width: 140vmax;  
