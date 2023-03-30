@@ -32,46 +32,35 @@ slider.oninput = function() {
     slider.value = flowRate;
   }
 
-let sensors = {
-  CPU: 0,
-  GPU: 0,
-  Water: 0
-}
-
-let temperatures = {
-  temperature: 0
-}
 
 google.charts.load('current', {'packages':['gauge']});
-    google.charts.setOnLoadCallback(drawChart);
+  
+google.charts.setOnLoadCallback(drawChart);
+
     
-    function drawChart() {
-      var data = google.visualization.arrayToDataTable([
-        ['Label', 'Value'],
-        ['Temp', 22],
-        ['CPU', 53]
-        
-      ]);
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+    ['Label', 'Value'],
+    ['Temp', 22],
+    ['CPU', 55]
+  ]);
 
-      var options = {
-        redFrom: 90, redTo: 100, redColor: '#D84727', greenColor: '#31AFD4', greenFrom: 0, greenTo: 75,
-        yellowFrom:75, yellowTo: 90,
-        minorTicks: 5,
-        legend: 'none',
-      };
+  var options = {
+    redFrom: 90, redTo: 100, redColor: '#D84727', greenColor: '#31AFD4', greenFrom: 0, greenTo: 75,
+    yellowFrom:75, yellowTo: 90,
+    minorTicks: 5, width: 700, height: 300 ,
+  };
 
-      var chart = new google.visualization.Gauge(document.getElementById('temp-chart'));
+  var chart = new google.visualization.Gauge(document.getElementById('temp-chart'));
+  chart.draw(data, options);
+  setInterval(function() {
+    $.getJSON('temps.json', {}).done((temperatures) => {
+      console.log(data);
+      data.setValue(0, 1, Math.floor(temperatures.temperature / 1000));
+      data.setValue(1, 1, Math.floor(temperatures.CPU / 1000));
       chart.draw(data, options);
-      setInterval(function() {
-        $.getJSON('temps.json', {}).done((temperatures) => {
-		  console.log(data);
-	
-	        data.setValue(0, 1, Math.floor(temperatures.temperature / 1000));
-          //data.setValue(0, 1, (Math.random() * 5) + 20);
-          data.setValue(1,1, Math.floor(temperatures.cpu / 1000))
-        	chart.draw(data, options);
-          
-	      });
-      }, 5000);
-    }
+    });
+  }, 5000);
+}
+
 
