@@ -19,8 +19,7 @@
             integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
             crossorigin="anonymous">
         </script>
-        <script async defer src="require.js"></script>
-        <script src="controlsLib.js" async defer></script>
+        <section class="hidden">
             <a href="/" target="_blank">
              
                 <div id="menu">
@@ -36,6 +35,7 @@
                 
                 </div>
                 <script async defer src="menuScript.js"></script>
+            </section>
             <?php
             if (empty($_POST)){
                 return;
@@ -45,15 +45,16 @@
             fwrite($file, $jsonData);
             fclose($file);
             ?>
-            
-            <div id="controls">
-                <a href="http://jonathan.broster.co.uk" type="html"><img src="media/bars-solid.svg" class="home"></img></a>
+            <section class="hidden">
+                <div id="controls">
+                    <a href="#menu" type="html"><img src="media/bars-solid.svg" class="home"></img></a>
 
-                <div id="controls-title">Controls</div>
-                <div class="temp-chart-container">
-                    <div id="temp-chart"></div>
+                    <div id="controls-title">Dashboard</div>
+                    <div class="temp-chart-container">
+                        <div id="temp-chart"></div>
+                    </div>
                 </div>
-            </div>
+            </section>
 
         </body>
         

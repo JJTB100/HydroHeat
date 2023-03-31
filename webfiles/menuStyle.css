@@ -5,7 +5,32 @@
   --foreground-color:#FCDDF2;
   --off-white: #eedddd;
 }
-
+html{
+  scroll-behavior: smooth;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+section{
+  display: grid;
+  min-height: 100vh;
+}
+.hidden{
+  opacity: 0;
+  transition: all 1s;
+  transform: translateX(100%);
+}
+.show{
+  opacity:1;
+  transform: translateX(0);
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
 body {
     
     /*background: linear-gradient(to top right, rgba(16, 38, 56, 0.7), rgba(0, 187, 255, 0.116)) url("media/ripples.png");*/
@@ -19,7 +44,8 @@ body {
     opacity: 1;
     font-size: 16px;
     color: var(--off-white);
- 
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
 /* Style the footer */
@@ -56,7 +82,8 @@ body {
 #menu{
     display:flex;
     align-items: center;
-    margin-bottom: 20%;
+    height:100vh;
+    margin-bottom: 10vh;
     color: var(--off-white)
 }
 
@@ -106,7 +133,7 @@ body {
     position: relative;
     z-index:2;
 
-    transform: translateY(12%);
+    transform: translateY(-1%);
 }
 
 #menu-items:hover > .menu-item{
@@ -199,14 +226,16 @@ body {
   font-size: 1.5em;
   color:var(--secondary-color);
 }
-
+#controls{
+  height: 100vh;
+  padding-top: 10vh;
+}
 #controls-title{
   font-size: 4rem;
   text-align: center;
   font-family: 'Exo', sans-serif;
   width: 50%;
   margin: auto;
-  transition: 400ms;
   text-align: center;
 
 }
