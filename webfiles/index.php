@@ -35,15 +35,7 @@
                 
                 </div>
             </section>
-            <?php
-            if (empty($_POST)){
-                return;
-            }
-            $file = fopen("/home/hydropi/HydroHeat/webfiles/temps.json", "w") or die ("DIE NOW!");
-            $jsonData = '{"temperature":'.$_POST["temperature"].'}';
-            fwrite($file, $jsonData);
-            fclose($file);
-            ?>
+
             <div id="controls-link"></div>
             <section class="hidden">
                 <div id="controls">
@@ -55,7 +47,16 @@
                     </div>
                 </div>
             </section>
-
+            <?php
+            if (empty($_POST)){
+                return;
+            }
+            $file = fopen("/home/hydropi/HydroHeat/webfiles/temps.json", "w") or die ("DIE NOW!");
+            $jsonData = '{"temperature":'.$_POST["temperature"].'}';
+            fwrite($file, $jsonData);
+            fclose($file);
+            ?>
+            
         </body>
         
 </html>
