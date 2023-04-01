@@ -44,6 +44,7 @@
             fwrite($file, $jsonData);
             fclose($file);
             ?>
+            
             <div id="controls-link"></div>
             <section class="hidden">
                 <div id="controls">
