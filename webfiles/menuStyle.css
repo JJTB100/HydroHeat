@@ -5,60 +5,48 @@
   --foreground-color:#FCDDF2;
   --off-white: #eedddd;
 }
+html{
+  scroll-behavior: smooth;
+  overflow: scroll;
+  overflow-x: hidden;
+
+}
+::-webkit-scrollbar {
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+section{
+  display: grid;
+  min-height: 100vh;
+}
+.hidden{
+  opacity: 0;
+  transition: all 1s;
+  transform: translateX(100%);
+}
+.show{
+  opacity:1;
+  transform: translateX(0);
+}
 
 body {
-    
-    /*background: linear-gradient(to top right, rgba(16, 38, 56, 0.7), rgba(0, 187, 255, 0.116)) url("media/ripples.png");*/
     background-color: var(--main-background-color);
-    
     font-family: 'Exo', sans-serif;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-
-    opacity: 1;
     font-size: 16px;
-
+    color: var(--off-white)
 }
-
-/* Style the footer */
-.footer {
-  grid-area: footer;
-  background-color: rgba(0,0,0,0);
-  padding: 10px;
-  text-align: center;
-  border-radius: 12px;
-  
-}
-
-/* Style the header */
-.header {
-  grid-area: header;
-  background-color: rgba(0, 0, 0, 0);
-  margin-bottom: 10px;
-  text-align: center;
-  z-index: 2;
-  opacity: 1;
-}
-
-
 
 #logo {
     width: 10%;
     position: absolute;
     top: 11%;
     left: 9%;
-    
-
 }
 
-
-
 #menu{
-
     display:flex;
     align-items: center;
-
+    height:100vh;
+    margin-bottom: 10vh;
     color: var(--off-white)
 }
 
@@ -100,15 +88,11 @@ body {
     background-position: 10% -250vmin;
   }
 
-
-  
-
 #menu-items {
     margin-left: clamp(3rem, 20vw, 48rem);
     position: relative;
     z-index:2;
-
-    transform: translateY(12%);
+    transform: translateY(-1%);
 }
 
 #menu-items:hover > .menu-item{
@@ -128,11 +112,8 @@ body {
     padding: clamp(0.25rem, 0.5vw, 1rem)0rem;
     transition: opacity 400ms ease;
 }
+
 #menu-background-pattern {
-    /*background-image: radial-gradient(
-      rgba(191, 244, 255, 0.1) 10%, 
-      transparent 9%
-    );*/
     background-image: url("media/HydroHeatLogo.png");
     opacity: 0.1;
     background-repeat:repeat-y, space;
@@ -151,7 +132,9 @@ body {
     z-index: -1;
     -webkit-filter: grayscale(70%);
     filter: grayscale(70%);
+    box-shadow: 0 0 50px 50px var(--main-background-color) inset;
   }
+
   #menu-background-image{
     height: 100vh;
     width: 100vw;
@@ -167,10 +150,11 @@ body {
     background-position: center 40%;
     background-size: 200vmax;
     opacity: 0.15;
+    box-shadow: 0 0 50px 50px var(--main-background-color) inset;
 
     transition: opacity 800ms ease,
-    background-size 2000ms ease,
-    background-position 800ms ease;
+      background-size 2000ms ease,
+      background-position 800ms ease;
   }
 
 #menu-items:hover ~ #menu-background-image {
@@ -182,17 +166,54 @@ body {
     background-size: 70vmin 70vmin;
     opacity: 0.3;
 }
+
 #main-name{
   margin:0;
   font-size: 1.5em;
   color:rgb(168, 225, 238);
   display: inline;
   float: left;
+  transition: 400ms;
 }
+
 #main-name-heat{
-  margin:0;
   font-size: 1.5em;
   color:var(--secondary-color);
 }
 
+#controls{
+  height: 100vh;
+  padding-top: 10vh;
+}
+#controls-title{
+  font-size: 4rem;
+  text-align: center;
+  font-family: 'Exo', sans-serif;
+  width: 50%;
+  margin: auto;
+  text-align: center;
 
+}
+
+.temp-chart-container{
+  width:fit-content;
+  margin: auto;
+  margin-bottom: 10%;
+  margin-top: 5%;
+  }
+
+
+  .home{
+    width: 3%;
+    height: 3%;
+    filter: invert(0.9);
+    margin-left: 1%;
+    margin-top: 1%;
+    position: absolute;
+    transition:400ms;
+  
+  }
+  .home:hover{
+    width: 4%;
+    height: 4%;
+  }

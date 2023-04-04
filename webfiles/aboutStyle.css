@@ -5,6 +5,10 @@
     --foreground-color:#FCDDF2;
     --off-white: #eedddd;
 }
+html {
+
+  scroll-behavior: smooth;
+}
 body{
     font-size: 20px;
     background-color: var(--main-background-color);
@@ -20,7 +24,6 @@ b{
 b1{
   color: var(--main-color);
   font-weight: 13px;
-  
 }
 .home{
   width: 3%;
@@ -41,14 +44,18 @@ b1{
     font-size: 2rem;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    width:100%;
+    width: 18%;
+    margin: auto;
+    transition: 400ms;
+
     
 }
 #title-heat, #title-hydro{
   width: 49%;
   display: inline-block;
   text-align: left;
-  color: var(--secondary-color)
+  color: var(--secondary-color);
+  transition: 400ms;
 }
 #title-hydro{
   
@@ -56,6 +63,12 @@ b1{
   float: left;
   width:51%;
   color: var(--main-color)
+}
+#title:hover #title-hydro{
+  transform: translate(-100px, 0px);
+}
+#title:hover #title-heat{
+  transform: translate(100px, 0px);
 }
 #sub-text, #sub-sub-text{
     text-align: center;
