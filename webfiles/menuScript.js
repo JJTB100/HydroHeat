@@ -34,6 +34,7 @@ function drawChart() {
   setInterval(function() {
     $.getJSON('temps.json', {}).done((temperatures) => {
       console.log(data);
+      console.log(temperatures);
       data.setValue(0, 1, Math.floor(temperatures.temperature / 1000));
       data.setValue(1, 1, Math.floor(temperatures.CPU / 1000));
       console.log(temperatures.temperature);
@@ -44,7 +45,6 @@ function drawChart() {
 
 const observer = new IntersectionObserver((entries) =>{
   entries.forEach((entry) =>{
-    console.log(entry)
     if(entry.isIntersecting){
       entry.target.classList.add('show');
     }
