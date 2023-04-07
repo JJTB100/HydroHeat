@@ -51,8 +51,8 @@
             }
             $file = fopen("/home/hydropi/HydroHeat/webfiles/temps.json", "w") or die ("Die Now.");
             $jsonData = $_POST;
-            echo(implode($_POST));
-            fwrite($file, implode($jsonData));
+            echo($_POST);
+            fwrite($file, $jsonData);
             fclose($file);
             ?>
             
