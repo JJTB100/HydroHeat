@@ -34,9 +34,9 @@ function drawChart() {
   setInterval(function() {
     $.getJSON('temps.json', {}).done((temperatures) => {
       console.log(data);
-      console.log(temperatures);
       data.setValue(0, 1, Math.floor(temperatures.temperature / 1000));
       data.setValue(1, 1, Math.floor(temperatures.CPU / 1000));
+      console.log(data);
       console.log(temperatures.temperature);
       chart.draw(data, options);
     });
