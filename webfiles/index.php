@@ -44,7 +44,7 @@
                 </div>
             </section>
             <?php
-            if (empty($_POST)){
+            if (empty($_POST[0])){
                 die("empty");
             }
             $file = fopen("/home/hydropi/HydroHeat/webfiles/temps.json", "w") or die ("Die Now.");
