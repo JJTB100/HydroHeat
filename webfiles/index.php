@@ -50,8 +50,9 @@
 
             }
             $file = fopen("/home/hydropi/HydroHeat/webfiles/temps.json", "w") or die ("Die Now.");
-            $jsonData = '{"temperature":'.$_POST["temperature"].',"CPU":'.$_POST["cpu"]'}';
-            fwrite($file, $jsonData);
+            $jsonData = $_POST;
+            echo(implode($_POST));
+            fwrite($file, implode($jsonData));
             fclose($file);
             ?>
             
