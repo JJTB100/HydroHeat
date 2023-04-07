@@ -44,14 +44,15 @@
                 </div>
             </section>
             <?php
-            if (empty($_POST[1])){
-                die("empty");
+            if (empty($_POST)){
+                echo("empty");
+                return;
+
             }
             $file = fopen("/home/hydropi/HydroHeat/webfiles/temps.json", "w") or die ("Die Now.");
-            $jsonData = $_POST[1];
+            $jsonData = '{"temperature":'.$_POST["temperature"].',"CPU":'.$_POST["cpu"].'}';
             fwrite($file, $jsonData);
             fclose($file);
-            
             ?>
             
         </body>
