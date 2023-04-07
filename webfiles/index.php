@@ -48,9 +48,10 @@
                 die("empty");
             }
             $file = fopen("/home/hydropi/HydroHeat/webfiles/temps.json", "w") or die ("Die Now.");
-            $jsonData = $_POST[0].$_POST[1];
+            $jsonData = $_POST[0];
             fwrite($file, $jsonData);
             fclose($file);
+            
             ?>
             
         </body>
