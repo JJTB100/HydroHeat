@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Exo:wght@900&display=swap" rel="stylesheet">
-        <!--<script scc="https://www.google.com/jsapi"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
         <title>HydroHeat</title>
         <link rel="stylesheet" href="menuStyle.css">
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script async defer src="menuScript.js"></script>
-            
-    </head>
-        <body>
-                    <script
+        <script
             src="https://code.jquery.com/jquery-3.6.3.min.js"
             integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
             crossorigin="anonymous">
         </script>
+    </head>
+        <body>
         <section id="menu-section">
             <a href="/" target="_blank">
              
@@ -53,7 +49,7 @@
                 return;
 
             }
-            $file = fopen("/home/hydropi/HydroHeat/webfiles/temps.json", "w") or die ("DIE NOW!");
+            $file = fopen("/home/hydropi/HydroHeat/webfiles/temps.json", "w") or die ("😵");
             $jsonData = '{"temperature":'.$_POST["temperature"].'}';
             fwrite($file, $jsonData);
             fclose($file);
