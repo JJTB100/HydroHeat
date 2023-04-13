@@ -21,7 +21,7 @@
                 <div id="menu">
                     <div id="menu-items">
                         <a href="" class="menu-item"><span id="main-name">Hydro</span><span id="main-name-heat">Heat</span></a>
-                        <a href="#controls-section" class="menu-item">Controls</a>
+                        <a href="#controls-link" class="menu-item">Controls</a>
                         <a href="about.html" class="menu-item">About</a>
                         <a href="funhovering.html" class="menu-item">Gallery</a>
                         <a href="https://github.com/JJTB100/HydroHeat" class="menu-item">Code</a>
@@ -33,7 +33,7 @@
             </section>
 
             <div id="controls-link"></div>
-            <section class="hidden" id="controls-section">
+            <section class="hidden">
                 <div id="controls">
                     <a href="#top" type="html"><img src="media/bars-solid.svg" class="home"></img></a>
 
