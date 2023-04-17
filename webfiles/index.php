@@ -42,6 +42,7 @@
                     <div class="temp-chart-container">
                         <div id="temp-chart"></div>
                     </div>
+                    <div id="curve_chart"></div>
                 </div>
             </section>
             <?php

@@ -225,3 +225,9 @@ body {
     width: 4%;
     height: 4%;
   }
+  #curve_chart{
+    height: fit-content;
+  }
+  #curve_chart text {
+    fill: white !important;
+}

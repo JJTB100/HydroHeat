@@ -55,3 +55,32 @@ const observer = new IntersectionObserver((entries) =>{
 })
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
+
+google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(CdrawChart);
+
+      function CdrawChart() {
+        var Cdata = google.visualization.arrayToDataTable([
+          ['Date', 'Avg. Temperature °C'],
+          ['29/4',  20],
+          ['30/4',  21],
+          ['1/5',  18],
+          ['2/5',  20],
+          ['3/5', 22],
+        ]);
+
+        var Coptions = {
+          title: 'Water Temperature Over Time',
+          curveType: 'function',
+          legend: { position: 'bottom' },
+          height: 400,
+          chartArea:{backgroundColor: "#221c35"},
+          colors:['32afd4'],
+          backgroundColor:'#221c35'
+          
+        };
+
+        var Cchart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        Cchart.draw(Cdata, Coptions);
+      }
