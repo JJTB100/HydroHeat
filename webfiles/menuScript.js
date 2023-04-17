@@ -36,6 +36,8 @@ function drawChart() {
       console.log(data);
       data.setValue(0, 1, Math.floor(temperatures.temperature / 1000));
       data.setValue(1, 1, Math.floor(temperatures.CPU / 1000));
+      console.log(data);
+      console.log(temperatures.temperature);
       chart.draw(data, options);
     });
   }, 5000);
@@ -43,7 +45,6 @@ function drawChart() {
 
 const observer = new IntersectionObserver((entries) =>{
   entries.forEach((entry) =>{
-    console.log(entry)
     if(entry.isIntersecting){
       entry.target.classList.add('show');
     }
