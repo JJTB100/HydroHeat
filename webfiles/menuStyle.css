@@ -21,11 +21,11 @@ section{
 .hidden{
   opacity: 0;
   transition: all 1s;
-  transform: translateX(100%);
+  opacity:1;
+  transform: translateX(90%);
 }
 .show{
-  opacity:1;
-  transform: translateX(0);
+  transform: translateX(2%);
 }
 
 body {
@@ -53,22 +53,22 @@ body {
 }
 
 #menu[data-active-index="0"] > #menu-background-image {
-  background-position: center 10%;
-}
-
-#menu[data-active-index="1"] > #menu-background-image {
   background-position: center 30%;
 }
 
+#menu[data-active-index="1"] > #menu-background-image {
+  background-position: center 35%;
+}
+
 #menu[data-active-index="2"] > #menu-background-image {
-  background-position: center 50%;
+  background-position: center 40%;
 }
 
 #menu[data-active-index="3"] > #menu-background-image {
-  background-position: center 70%;
+  background-position: center 45%;
 }
 #menu[data-active-index="4"] > #menu-background-image {
-  background-position: center 90%;
+  background-position: center 50%;
 }
 
 #menu[data-active-index="0"] > #menu-background-pattern {
@@ -154,20 +154,19 @@ body {
     left: 0px;
     top: 0px;
     z-index:-1;
-
+    
     background-position: center 40%;
-    background-size: 200vmax;
     opacity: 0.15;
     box-shadow: 0 0 50px 50px var(--main-background-color) inset;
-
-    transition: opacity 800ms ease,
+    
+    transition: all 500ms ease,
+      opacity 800ms ease,
       background-size 2000ms ease,
       background-position 800ms ease;
 
   }
 
 #menu-items:hover ~ #menu-background-image {
-    background-size: 170vmax;
     opacity: 0.1;
 }
 
@@ -189,9 +188,9 @@ body {
   font-size: 1.5em;
   color:var(--secondary-color);
 }
+
 #controls{
   height: 100vh;
-  padding-top: 10vh;
 }
 #controls-title{
   font-size: 4rem;
@@ -206,7 +205,7 @@ body {
 .temp-chart-container{
   width:fit-content;
   margin: auto;
-  margin-bottom: 10%;
+  margin-bottom: 0%;
   margin-top: 5%;
   }
 
