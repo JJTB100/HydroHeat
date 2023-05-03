@@ -137,23 +137,57 @@ crontab -e
 - Then by plugging the Pico into another machine it can be accessed using thonny
 - The pimoroni micropython script can be installed from https://github.com/pimoroni/pimoroni-pico/releases/tag/v1.19.17 and then using thonny transferred onto the Pico
 - Then upload a script titled 'main.py' (has to be exactly that name) which will be run on startup
-- The script will turn on the motors as shown below for 500 seconds, the script will stop when the pico is unplugged or 500 seconds have passed
-
+- The code takes input from the serial port, which is useful becuase the pico automatically sets the serial port as the debug port, which means we only have to have a common "input" command to read a line from the serial port.
+- The code then uses this to turn on the motors to a specific speed, which is dependant on the CPU temperature values.
 ```
 from motor import Motor
+import math
 import time
+import sys
+import machine
+from picographics import PicoGraphics, DISPLAY_PICO_EXPLORER
+from machine import Pin
+
+# set up screen buffer and ADC
+
+display = PicoGraphics(display=DISPLAY_PICO_EXPLORER)
+led = machine.Pin(25, machine.Pin.OUT)
 
 m = Motor((8,9))
 
-#motor, speed,(-1 to 1)
-def MotorOn(m1, speed):
-    m1.enable()
-    m1.speed(speed)
 
-MotorOn(m, 1)
-time.sleep(500)
+WHITE = display.create_pen(255, 255, 255)
+BLACK = display.create_pen(0,0,0)
+
+led(1)
+time.sleep(1)
+led(0)
+
+waterTemp = 22222
+CPUTemp=100000
+speedM=0.5
+data=""
+m.enable()
+while True:
+    data = input()
+    waterTemp = data[12:17]
+    CPUTemp = data[18:24]
+    display.set_pen(WHITE)
+    display.clear()
+    display.set_pen(BLACK)
+    display.text("Water: "+str(waterTemp), 10, 10, 200)
+    display.text("CPU: "+str(CPUTemp), 10, 190, 200)
+    display.text("Motor Speed: "+str(speedM), 10, 100, 200)
+    display.update()
+    speedM = round((float(CPUTemp)/100000),2)
+    m.speed(speedM)
+    
 m.disable()
 ```
+### Setting up the client to send data to the pico
+- The pi sends data to the pico via a serial port interface
+- The data should be formatted in the form `watertemperature:xxxxx,xxxxx\n`
+
 ### The prototype
 - Setting up the prototype or real product is quite simple with the motor going on one side of the water resevoir
 - The temperature sensor on the other side
