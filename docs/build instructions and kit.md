@@ -81,7 +81,7 @@ Require all granted
 
 sudo chown -R hydroheat:www-data www
 ```
-- install php
+- install php.
 ```
 sudo apt install php libapache2-mod-php
 ```
